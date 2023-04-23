@@ -10,6 +10,10 @@ body {
     min-height: 100vh;
 }
 
+img { 
+    max-width: 100%;
+}
+
 a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.75);
@@ -22,6 +26,7 @@ ul {
 .container {
     max-width: 1040px;
     margin-inline: auto;
+    padding-inline: 1rem;
 }
 
 .flex {
@@ -34,6 +39,10 @@ ul {
 
 .sm-gap {
     gap: 0.5rem;
+}
+
+.gap {
+    gap: 1.5rem;
 }
 
 .primary-nav input {
@@ -112,4 +121,66 @@ ul {
 
 .footer__email {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 986px) {
+    .logo {
+        display: none;
+    }
+
+    .primary-nav input {
+        width: 100%;
+        max-width: 30rem;
+        min-width: 0;
+    }
+
+    .primary-nav form {
+        width: 100%;
+        justify-content: center;
+        padding: 0 1.25rem;
+    }
+
+    .primary-nav__wyszukiwanie {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .primary-nav__kategorie {
+        overflow-x: scroll;
+    }
+
+    .primary-nav__kategorie::-webkit-scrollbar {
+        display: none;
+    }
+      
+    .primary-nav__kategorie {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .primary-nav__kategorie > div {
+        min-width: 1008px;
+    }
+
+    .primary-nav__controls {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .produkty > div {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .promocje {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+
+    .secondary-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
 }
